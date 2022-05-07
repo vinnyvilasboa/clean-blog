@@ -2,7 +2,9 @@ const express = require('express')
 const app = new express()
 const path = require('path');
 const ejs = require('ejs')
+const mongoose = require('mongoose')
 
+mongoose.connect('mongodb://localhost/my_database', {useNewUrlParser: true})
 
 app.set('view engine', 'ejs')
 /*With the above code we tell EXPRESS to use EJS as our templating engine, that any file ending in .ejs should be rendered with the EJS package*/
